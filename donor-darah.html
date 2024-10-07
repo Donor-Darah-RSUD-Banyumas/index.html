@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Darah RSUD Banyumas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            color: #fff;
+            padding: 30px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #c0392b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        th {
+            background: #e74c3c;
+            color: #fff;
+        }
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        form input, form select, form textarea, form button {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        form button {
+            background: #e74c3c;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #c0392b;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('donorForm');
+            const data = new FormData(form);
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzDR8HML9pKLx0Iqp97V_W0YlbZu3Pq17LgwyPbaY1-AXESUCAycQJazJQkT7gye7cYPQ/exec';
+
+            fetch(scriptURL, { method: 'POST', body: data })
+                .then(response => alert('Pendaftaran berhasil dikirim!'))
+                .catch(error => alert('Terjadi kesalahan. Silakan coba lagi.'));
+        }
+    </script>
+</head>
+<header>
+        <div class="container">
+            <h1>Donor Darah RSUD Banyumas</h1>
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#jadwal">Jadwal Donor</a></li>
+                    <li><a href="#manfaat">Manfaat Donor</a></li>
+                    <li><a href="#kontak">Kontak Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="gambar">
+        <div class="container">
+            <img src="https://i.imgur.com/GOutuND.jpg" alt="Donor Darah RSUD Banyumas" style="width:100%; height:auto; margin-bottom:20px;">
+        </div>
+    </section>
+
+
+    <section id="video">
+        <div class="container">
+            <h2>Video Donor Darah</h2>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/6ABUfUDJuzA" title="Donor Darah RSUD Banyumas" frameborder="0" allowfullscreen style="border-radius: 8px; margin-top: 20px;"></iframe>
+        </div>
+    </section>
+
+    
+
+    <section id="manfaat">
+        <div class="container">
+            <h2>Manfaat Donor Darah</h2>
+            <ul>
+                <li>Membantu menyelamatkan nyawa orang lain.</li>
+                <li>Menjaga kesehatan jantung dan meningkatkan produksi sel darah merah.</li>
+                <li>Meningkatkan rasa kepedulian sosial.</li>
+                <li>Menurunkan risiko kanker.</li>
+                <li>Memperbaiki kesehatan psikologis dengan membantu orang lain.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pendaftaran">
+        <div class="container">
+            <h2>Formulir Pendaftaran Donor Darah</h2>
+            <form id="donorForm" onsubmit="submitForm(event)">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Lengkap Anda" required>
+
+                <label for="usia">Usia:</label>
+                <input type="number" id="usia" name="usia" placeholder="Usia Anda" required>
+
+                <label for="gol_darah">Golongan Darah:</label>
+                <select id="gol_darah" name="gol_darah" required>
+                    <option value="">Pilih Golongan Darah</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+
+                <label for="kontak">Nomor Telepon:</label>
+                <input type="tel" id="kontak" name="kontak" placeholder="Nomor Telepon Anda" required>
+
+                <label for="catatan">Catatan Tambahan:</label>
+                <textarea id="catatan" name="catatan" placeholder="Catatan tambahan (opsional)"></textarea>
+
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="pelayanan">
+        <div class="container">
+            <h2>Jam Pelayanan UTDRS RSUD Banyumas</h2>
+            <h3>Pengambilan Darah Donor</h3>
+            <p>Senin - Sabtu: Jam 07.00 - 19.00 WIB</p>
+            <h3>Pengambilan Produk Darah dan Crossmatch</h3>
+            <p>Setiap Hari: 24 Jam</p>
+            <h3>Tempat UTDRS</h3>
+            <p>Gedung Radiologi Lantai 2 (Depan Ruang Perinatologi)</p>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <p>Jika Anda memiliki pertanyaan atau ingin mendaftar sebagai pendonor darah, silakan hubungi kami:</p>
+            <ul>
+                <li><strong>Telepon:</strong> (0281) 796511 ext 206</li>
+                <li><strong>Email:</strong> donor@rsudbanyumas.go.id</li>
+                <li><strong>Alamat:</strong> RSUD Banyumas, Jl. Rumah Sakit No. 1, Banyumas, Kabupaten Banyumas, Provinsi Jawa Tengah, Indonesia</li>
+                <li><strong>Website:</strong> <a href="https://rsudbanyumas.banyumaskab.go.id" target="_blank">https://rsudbanyumas.banyumaskab.go.id</a></li>
+            </ul>
+            <h3>Lokasi Kami</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.121262234636!2d109.23483991540423!3d-7.428484075135752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e7312b3e0ef%3A0xa4f39ef2b6f00c6!2sRSUD%20Banyumas%2C%20Jl.%20Rumah%20Sakit%20No.1%2C%20Kabupaten%20Banyumas%2C%20Jawa%20Tengah%2C%20Indonesia!5e0!3m2!1sid!2sid!4v1693923706259!5m2!1sid!2sid" width="100%" height="400" style="border:0; margin-top: 20px; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="produk">
+        <div class="container">
+            <h2>Produk Darah UTDRS</h2>
+            <ul>
+                <li>Whole Blood (WB)</li>
+                <li>Packed Red Cells (PRC)</li>
+                <li>Platelet/Trombosit (TC)</li>
+                <li>Fresh Frozen Plasma (FFP)</li>
+                <li>Leukodepleted</li>
+                <li>PRC Pediatrik</li>
+                <li>Trombosit Apheresis (TA)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RSUD Banyumas. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
